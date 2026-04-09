@@ -1,10 +1,10 @@
 # Pneumonia Detection from Chest X-Ray Images using CNN
 
-## Overview
+## Objective
 
 This project implements a **Convolutional Neural Network (CNN)** using **TensorFlow** and **Keras** to automatically classify chest X-ray images as either **NORMAL** or **PNEUMONIA**. The model is trained on a dataset of paediatric chest X-rays and aims to assist in early detection of pneumonia.
 
-## Dataset
+## Dataset Details
 
 The dataset contains **5,856 JPEG chest X-ray images** (anterior-posterior view) collected from paediatric patients aged 1 to 5 years at a renowned hospital. These images were captured as part of the routine clinical care of the patients.
 
