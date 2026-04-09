@@ -178,3 +178,5 @@ The script handles everything automatically — from loading data to saving the 
 - **Matplotlib** — plotting training curves and sample images
 - **Seaborn** — confusion matrix visualisation
 - **Scikit-learn** — classification metrics
+## Conclusion
+Deep learning models, specifically CNNs, demonstrate high efficacy in identifying pneumonia from X-rays. While the model achieves high accuracy, its primary role is to serve as a decision-support tool. The integration of Heatmaps (Grad-CAM) is often recommended to show radiologists exactly which part of the X-ray the model is "looking at" to make its prediction, increasing clinical trust.
