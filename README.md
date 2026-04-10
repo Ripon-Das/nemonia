@@ -79,19 +79,6 @@ Input (150 x 150 x 3)
 - **Flatten** followed by two dense layers provides sufficient capacity for the final classification decision.
 - **Sigmoid output** produces a probability score for binary classification.
 
-### Training Parameters
-
-| Setting | Value |
-|---------|-------|
-| Optimiser | Adam (lr = 0.0001) |
-| Loss function | Binary crossentropy |
-| Batch size | 32 |
-| Epochs | 25 (max) |
-| Early stopping | Patience of 5 epochs on validation loss |
-| LR reduction | Factor 0.5 when validation loss plateaus for 3 epochs |
-| Model checkpoint | Saves best model by validation accuracy |
-
----
 
 ## Findings
 
@@ -138,9 +125,9 @@ After running the script, the following files are saved in the `outputs/` direct
 
 ```
 Pneumonia Detection/
-├── chest_xray_analysis.py    # Main script
-├── requirements.txt          # Python dependencies
-├── README.md                 # This file
+├── chest_xray_analysis.py    
+├── requirements.txt        
+├── README.md                 
 ├── x-ray_image/
 │   ├── train/
 │   │   ├── NORMAL/
@@ -151,7 +138,7 @@ Pneumonia Detection/
 │   └── val/
 │       ├── NORMAL/
 │       └── PNEUMONIA/
-└── outputs/                  # Generated after running
+└── outputs/                 
 ```
 
 ## How to Run
