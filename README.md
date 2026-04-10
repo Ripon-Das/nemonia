@@ -32,17 +32,6 @@ The dataset was first explored to understand the distribution of images across c
 
 All images are resized to **150 x 150 pixels** and pixel values are normalised to a [0, 1] range by dividing by 255. This standardisation ensures consistent input dimensions and helps the model converge faster during training.
 
-### Data Augmentation
-
-The following augmentation techniques are applied to training images to increase data diversity and reduce overfitting:
-
-- Rotation (up to 20 degrees)
-- Width and height shifting (up to 20%)
-- Shear transformation (up to 20%)
-- Zoom (up to 20%)
-- Horizontal flipping
-- Nearest-neighbour fill mode
-
 **Important**: Validation and test images are only rescaled — no augmentation is applied to them, preserving the integrity of the evaluation.
 
 ### Addressing Class Imbalance
@@ -70,15 +59,6 @@ Input (150 x 150 x 3)
     Dense(256, ReLU) -> BN -> Dropout(0.5)
     Dense(1, Sigmoid) -> Output
 ```
-
-**Why this architecture?**
-
-- **Four convolutional blocks** with increasing filters (32 -> 64 -> 128 -> 256) allow the network to learn progressively complex features — from simple edges in early layers to high-level lung patterns in deeper layers.
-- **Batch Normalisation** after convolutions stabilises training by normalising intermediate activations.
-- **Dropout** at 25% in convolutional blocks and 50% in dense layers acts as regularisation to prevent overfitting.
-- **Flatten** followed by two dense layers provides sufficient capacity for the final classification decision.
-- **Sigmoid output** produces a probability score for binary classification.
-
 
 ## Findings
 
@@ -157,7 +137,7 @@ python chest_xray_analysis.py
 
 The script handles everything automatically — from loading data to saving the trained model and evaluation results.
 
-## Technologies Used
+## Libraries Used
 
 - **Python 3.8+**
 - **TensorFlow / Keras** — model building and training
